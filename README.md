@@ -1,6 +1,6 @@
 # noteTaker
 
-url:  https://auzzie13.github.io/noteTaker/
+url:  https://notetaker-austin.herokuapp.com/
 
 ## Description
 
