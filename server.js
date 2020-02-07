@@ -2,6 +2,7 @@ const express = require('express');
 const path = require('path');
 const fs = require('fs');
 const util = require("util");
+const compression = require("compression");
 
 const app = express();
 const PORT = process.env.PORT || 9090;
@@ -11,6 +12,7 @@ const writeFileAsync = util.promisify(fs.writeFile);
 app.use(express.urlencoded({ extended: true }));
 app.use(express.json());
 app.use(express.static('public'));
+app.use(compression());
 
 //api routes
 app.get('/api/notes', function (req, res) {
